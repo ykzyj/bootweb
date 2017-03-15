@@ -1,0 +1,51 @@
+/*
+keleyidivpagver 分页插件
+http://keleyi.com
+柯乐义
+*/
+#div_pager{
+	clear:both;
+	height:30px;
+	line-height:30px;
+	color:#999999;
+}
+
+#div_pager a{
+	padding:4px 8px;
+	font-size:12px;
+	border:1px solid #DFDFDF;
+	background-color:#FFF;
+	color:#9d9d9d;
+	text-decoration:none;
+}
+
+#div_pager span{
+	padding:4px 8px;
+	font-size:14px;
+}
+
+#div_pager span.disabled{
+	padding:4px 8px;
+	margin:10px 3px;
+	font-size:12px;
+	border:1px solid #DFDFDF;
+	background-color:#FFF;
+	color:#DFDFDF;
+}
+
+#div_pager span.curr{
+	padding:4px 8px;
+	font-size:12px;
+	border:1px solid #428bca;
+	background-color:#428bca;
+	color:#FFF;
+}
+
+#div_pager a:hover{
+	background-color:#B0E2FF;
+	border:1px solid #B0E2FF;
+}
+
+#div_pager span.normalsize{
+	font-size:12px;
+}
