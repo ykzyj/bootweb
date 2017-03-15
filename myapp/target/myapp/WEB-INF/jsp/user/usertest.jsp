@@ -142,12 +142,18 @@
 	                                            <td>1</td>
 	                                            <td>${userinfo.u_userName}</td>
 	                                            <td>${userinfo.u_realName}</td>
+	                                            <c:if test="${userinfo.u_sex == 1}">
+												    <td>男</td>
+												</c:if>
+												<c:if test="${userinfo.u_sex == 2}">
+												    <td>女</td>
+												</c:if>
 	                                            <td>${userinfo.u_sex}</td>
 	                                            <td>${userinfo.u_phone}</td>
 	                                            <td>${userinfo.u_createTime}</td>
 	                                            <td>${userinfo.u_lastChangeTime}</td>
 	                                            <td><a class="edit" href="javascript:;">Edit</a></td>
-								<td><a class="delete" href="javascript:;">Delete</a></td>
+												<td><a class="delete" href="javascript:;">Delete</a></td>
 	                                        </tr>
 	                                    </c:forEach>
 						</tbody>
@@ -179,6 +185,9 @@
 
 			<div class="modal-body">
 
+				<div id="adduser_error" class="alert alert-danger" style="display:none">
+		                服务器开小差了，添加失败！
+	            </div>
 				<div class="form-group" >
 					<label for="u_userName" class="col-sm-2 control-label">用户名</label>
 					<div class="col-sm-10" >
@@ -201,7 +210,7 @@
 				</div>
 				<div id="password_error" class="alert alert-danger" style="display:none">
 		                两次输入的密码不一致！
-		            </div>
+	            </div>
 				<div class="form-group" >
 					<label for="u_realName" class="col-sm-2 control-label">昵称</label>
 					<div class="col-sm-10" >
@@ -305,8 +314,7 @@
 		var u_realName= $("#u_realName").val();
 		var u_sex = $("select[name=“u_sex”]").val();
 		var u_phone= $("#u_phone").val();
-		alert(u_sex);
-		/*  if(u_passWord!=u_passWord_too)
+		if(u_passWord!=u_passWord_too)
 		{
 			$("#password_error").show();
 			return;
@@ -324,10 +332,10 @@
                 }
                 else
                 {
-                	$("#login_error").show();
+                	$("#adduser_error").show();
                 }
             }
-        });  */
+        });  
         
 	};
 	</script>

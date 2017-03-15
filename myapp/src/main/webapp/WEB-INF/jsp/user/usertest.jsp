@@ -83,7 +83,7 @@
 	
 						<div class="btn-group">
 	
-							<a class=" btn green" data-toggle="modal" href="#stack1">添加用户信息</a>
+							<a class=" btn green" data-toggle="modal" href="#adduser">添加用户信息</a>
 	
 						</div>
 	
@@ -148,12 +148,11 @@
 												<c:if test="${userinfo.u_sex == 2}">
 												    <td>女</td>
 												</c:if>
-	                                            <td>${userinfo.u_sex}</td>
 	                                            <td>${userinfo.u_phone}</td>
 	                                            <td>${userinfo.u_createTime}</td>
 	                                            <td>${userinfo.u_lastChangeTime}</td>
 	                                            <td><a class="edit" href="javascript:;">Edit</a></td>
-												<td><a class="delete" href="javascript:;">Delete</a></td>
+												<td><a class="delete"  data-toggle="modal" href="#delete_info">Delete</a></td>
 	                                        </tr>
 	                                    </c:forEach>
 						</tbody>
@@ -171,7 +170,7 @@
 	
 	</div>
 
-		<div id="stack1" class="modal hide fade" tabindex="-1" data-focus-on="input:first">
+		<div id="adduser" class="modal hide fade" tabindex="-1" data-focus-on="input:first">
 
 			<div class="modal-header">
 
@@ -242,6 +241,35 @@
 				<button type="button" data-dismiss="modal" class="btn">关闭</button>
 
 				<button type="button" class="btn green"  onclick="addUser();">提交</button>
+
+			</div>
+
+		</div>
+		
+		
+		<div id="delete_info" class="modal hide fade" tabindex="-1" data-focus-on="input:first">
+
+			<div class="modal-header">
+
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+
+				<h4 class="modal-title" id="myModalLabel">
+					信息删除提醒
+				</h4>
+
+			</div>
+
+			<div class="modal-body">
+					<h5 class="modal-title" >
+					确定删除吗？
+					</h5>
+			</div>
+
+			<div class="modal-footer">
+
+				<button type="button" data-dismiss="modal" class="btn">取消</button>
+
+				<button type="button" class="btn yellow"  onclick="addUser();">确定</button>
 
 			</div>
 
