@@ -1,3 +1,5 @@
+com/yk/common/page/po/Page.class
+com/yk/common/page/mapper/PageMapper.class
 com/yk/system/controller/LoginController.class
 com/yk/common/util/StringUtil.class
 com/yk/system/po/User_Info.class
@@ -9,4 +11,6 @@ com/yk/system/controller/UserController.class
 com/yk/system/service/impl/User_InfoServiceImpl.class
 com/yk/system/controller/UserTestController.class
 com/yk/system/controller/MainController.class
+com/yk/common/page/service/PageService.class
 com/yk/system/service/User_InfoService.class
+com/yk/common/page/service/impl/PageServiceImpl.class

@@ -137,9 +137,9 @@
 	
 						<tbody>
 	
-								<c:forEach var="userinfo" items="${userInfoList}">
+								<c:forEach var="userinfo" items="${userInfoList}" varStatus="status">
 	                                        <tr>
-	                                            <td>1</td>
+	                                            <td>${status.count}</td>
 	                                            <td>${userinfo.u_userName}</td>
 	                                            <td>${userinfo.u_realName}</td>
 	                                            <c:if test="${userinfo.u_sex == 1}">
@@ -309,10 +309,10 @@
 
 	<!-- END CORE PLUGINS -->
 	<script type="text/javascript">
-	var totalPage = 20;
-	var totalRecords = 390;
-	//var pageNo = getParameter('p');
-	var pageNo = 1;
+	var totalPage = ${page.totalPage};
+	var totalRecords = ${page.totalNumber};
+	var pageNo = ${page.currentPage};
+	//var pageNo = 1;
 	if (!pageNo) {
 	pageNo = 1;
 	}
@@ -324,11 +324,12 @@
 	//总数据条数
 	totalRecords: totalRecords,
 	//链接前部
-	hrefFormer: 'keleyidivpager',
+	hrefFormer: 'http://localhost:8080/usertest/toUserInfo',
 	//链接尾部
-	hrefLatter: '.htm',
+	hrefLatter: '',
 	getLink: function (n) {
-	return this.hrefFormer + this.hrefLatter + "?p=" + n; //参数名跟上面相同
+		//var nextpno= n+1;
+		return this.hrefFormer + this.hrefLatter + "?pno=" +n; //参数名跟上面相同
 	}
 	});
 	kkpager.generPageHtml();

@@ -28,20 +28,24 @@
     </insert>
 
     <select id="selectUser_InfoAll" resultType="com.yk.system.po.User_Info">
-        select U_ID,
-        U_UserName,
-        U_RealName,
-        U_PassWord,
-        U_Sex,
-        U_Phone,
-        U_CreateTime,
-        U_LastChangeTime,
-        remark
+        select <include refid="columns"/>
         from user_info
+    </select>
+    
+    <select id="selectUser_InfoByCondition" resultType="com.yk.system.po.User_Info">
+        select <include refid="columns"/>
+        from user_info
+        order by U_ID limit #{page.dbIndex},#{page.dbNumber}
     </select>
 
     <select id="selectUser_InfoByUserName" resultType="com.yk.system.po.User_Info">
-        select U_ID,
+        select <include refid="columns"/>
+        from user_info
+        where U_UserName=#{0}
+    </select>
+    
+    <sql id="columns">
+    	U_ID,
         U_UserName,
         U_RealName,
         U_PassWord,
@@ -49,8 +53,5 @@
         U_Phone,
         U_CreateTime,
         U_LastChangeTime,
-        remark
-        from user_info
-        where U_UserName=#{0}
-    </select>
+        remark</sql>
 </mapper>

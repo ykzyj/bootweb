@@ -1,6 +1,7 @@
 package com.yk.system.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,5 +28,10 @@ public class User_InfoServiceImpl implements User_InfoService{
         // TODO Auto-generated method stub
         return user_InfoMapper.selectUser_InfoByUserName(usrename);
     }
+
+	public List<User_Info> selectUser_InfoByCondition(Map paramMap) {
+		// TODO Auto-generated method stub
+		return user_InfoMapper.selectUser_InfoByCondition(paramMap);
+	}
 
 }
