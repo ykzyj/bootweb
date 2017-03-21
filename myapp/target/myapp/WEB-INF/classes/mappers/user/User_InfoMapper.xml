@@ -35,9 +35,10 @@
     <select id="selectUser_InfoByCondition" resultType="com.yk.system.po.User_Info">
         select <include refid="columns"/>
         from user_info
-        order by U_ID limit #{page.dbIndex},#{page.dbNumber}
+        order by U_ID
     </select>
-
+	<!--  limit #{page.dbIndex},#{page.dbNumber} -->
+	
     <select id="selectUser_InfoByUserName" resultType="com.yk.system.po.User_Info">
         select <include refid="columns"/>
         from user_info

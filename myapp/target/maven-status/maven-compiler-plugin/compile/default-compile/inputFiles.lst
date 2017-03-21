@@ -4,6 +4,7 @@
 /home/alan/yk/learn/web/web001/myapp/src/main/java/com/yk/common/page/service/impl/PageServiceImpl.java
 /home/alan/yk/learn/web/web001/myapp/src/main/java/com/yk/common/util/StringUtil.java
 /home/alan/yk/learn/web/web001/myapp/src/main/java/com/yk/system/service/impl/User_InfoServiceImpl.java
+/home/alan/yk/learn/web/web001/myapp/src/main/java/com/yk/common/page/interceptor/PageInterceptor.java
 /home/alan/yk/learn/web/web001/myapp/src/main/java/com/yk/system/mapper/User_InfoMapper.java
 /home/alan/yk/learn/web/web001/myapp/src/main/java/com/yk/common/page/mapper/PageMapper.java
 /home/alan/yk/learn/web/web001/myapp/src/main/java/com/yk/system/controller/MainController.java

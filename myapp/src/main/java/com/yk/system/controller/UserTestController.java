@@ -32,8 +32,8 @@ public class UserTestController {
     @Autowired
     private User_InfoServiceImpl user_InfoServiceImpl;
     
-    @Autowired
-    private PageServiceImpl pageServiceImpl;
+/*    @Autowired
+    private PageServiceImpl pageServiceImpl;*/
 
     @RequestMapping(value = "/toUserInfo", method = RequestMethod.GET)
     public String toUserInfo(Model model,HttpServletRequest request) {
@@ -50,11 +50,11 @@ public class UserTestController {
     		page.setCurrentPage(Integer.valueOf(currentPage));
     	}
     	
-    	Map<String,Object> page_parameter = new HashMap<String, Object>();
+/*    	Map<String,Object> page_parameter = new HashMap<String, Object>();
     	page_parameter.put("tablename", User_Info.class.getSimpleName().toLowerCase());
     	int totalNumber=pageServiceImpl.getSelectCount(page_parameter);
     	page.setTotalNumber(totalNumber);
-    	page.initCount();
+    	page.initCount();*/
     	
     	Map<String,Object> user_parameter = new HashMap<String, Object>();
     	user_parameter.put("page", page);

@@ -3,6 +3,7 @@ package com.yk.system.service;
 import java.util.List;
 import java.util.Map;
 
+import com.yk.common.page.po.Page;
 import com.yk.system.po.User_Info;
 
 public interface User_InfoService {
